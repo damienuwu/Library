@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center py-8">
+
+    <h1 class="text-3xl font-bold mb-6">My Library</h1>
+    <button id="newBookBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        New Book
+    </button>
+
+    <div id="libraryDisplay" class="mt-6 flex flex-wrap justify-center gap-4"></div>
+
+    <!-- Modal -->
+    <div id="bookModal" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h2 class="text-xl font-semibold mb-4">Add New Book</h2>
+            <form id="bookForm" class="flex flex-col gap-3">
+                <input type="text" id="title" placeholder="Title" required class="border p-2 rounded">
+                <input type="text" id="author" placeholder="Author" required class="border p-2 rounded">
+                <input type="number" id="pages" placeholder="Pages" required class="border p-2 rounded">
+                <label class="flex items-center gap-2">
+                    <input type="checkbox" id="read"> Read
+                </label>
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+                    Add Book
+                </button>
+                <button type="button" id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    Cancel
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="book.js"></script>
+</body>
+</html>
